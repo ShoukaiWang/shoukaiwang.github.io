@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SKのBlog - King</title><meta name="description" content="What doesn&#39;t kill you makes you stronger."><meta name="keywords" content="SK,iOS,Swift"><meta name="author" content="SK Wang"><meta name="copyright" content="SK Wang"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/favicon.png"><link rel="canonical" href="https://shoukaiwang.github.io/page/4/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="SKのBlog"><meta property="og:url" content="https://shoukaiwang.github.io/page/4/"><meta property="og:site_name" content="SKのBlog"><meta property="og:description" content="What doesn&#39;t kill you makes you stronger."><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/avatar.jpeg"><meta property="article:published_time" content="2020-07-23T06:02:10.104Z"><meta property="article:modified_time" content="2020-07-23T06:02:10.104Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"Press","message_next":"to bookmark this page"},"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="SKのBlog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/avatar.jpeg" onerror="onerror=null;src='/img/favicon.png'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">40</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722000054.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">SKのBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">SKのBlog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ShoukaiWang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shoukaiwang@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/195c875e/" title="单链表中删除相等的多余结点">单链表中删除相等的多余结点</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 21:48:45"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">用单链表保存m个整数, 结点的结构为(data,link),且|data|&lt;=n(n为正整数). 现在要去设计一个时间复杂度尽可能高效的算法. 对于链表中的data 绝对值相等的结点, 仅保留第一次出现的结点,而删除其余绝对值相等的结点.
+示例:12输入：0-&gt;2-&gt;-2-&gt;6-&gt;2-&gt;10输出：0-&gt;2-&gt;6-&gt;10
+解题思路：
+申请大小为n+1的辅助数组t并赋值初值为0；
+从首元结点开始遍历链表,依次检查t[|data|]的值– 若[|data|]为0,即结点首次出现,则保留该结点,并置t[|data|] = 1– 若t[|data|]不为0,则将该结点从链表中删除.代码：12345678910111213141516171819202122232425typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void DeleteEqualNode(LinkList *L, int n) {    i ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/6c088b74/" title="寻找数组中的主元素">寻找数组中的主元素</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 21:34:43"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">已知一个整数序列A = (a0,a1,a2,…an-1),其中(0&lt;= ai &lt;=n),(0&lt;= i&lt;=n). 若存在ap1= ap2 = …= apm = x,且m&gt;n/2(0&lt;=pk&lt;n,1&lt;=k&lt;=m),则称x 为 A的主元素. 例如,A = (0,5,5,3,5,7,5,5),则5是主元素; 若B = (0,5,5,3,5,1,5,7),则A 中没有主元素,假设A中的n个元素保存在一个一维数组中,请设计一个尽可能高效的算法,找出数组元素中的主元素,若存在主元素则输出该元素,否则输出-1.
+示例:12输入：A = (0, 5, 5, 3, 5, 7, 5, 5)输出：5
+解题思路：所谓主元素就是在一个数组中的某一个元素所出现的的次数大于大于数组长度的1/2
+
+选取候选的主要元素：依次扫描所给数组中的每一个整数，将第一个遇到的整数i保存到c中，记录i出现的次数为1，若遇到的下一个整数仍等于i，则计算器加1，否则计数器减1，当计数器减到0时，将遇到的下一个整数保存到x中，计数重新记为1，开始新一轮计数，即从当前位置开始重复上述过程 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/496308ba/" title="数组元素左移">数组元素左移</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 20:50:59"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">设将n(n&gt;1)个整数存放到一维数组R中, 试设计一个在时间和空间两方面都尽可能高效的算法;将R中保存的序列循环左移p个位置(0&lt;p&lt;n)个位置, 即将R中的数据由(x0,x1,……,xn-1)变换为(xp,xp+1,…,xn-1,x0,x1,…,xp-1)。
+示例:123输入：pre[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},      n = 10, p = 3输出：pre[10] = {3, 4, 5, 6, 7, 8, 9, 0, 1, 2}
+解题思路：先逆置整个数组，再逆置前n-p个元素和后面的p个元素
+代码：1234567891011121314151617181920212223242526typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void Reverse(int *pre, int left, int right) {    int i = left;    int j = ri ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/e5f24551/" title="删除递增有序链表中值大于等于mink且小于等于maxk">删除递增有序链表中值大于等于mink且小于等于maxk</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 18:19:24"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">设计一个算法,删除递增有序链表中值大于等于mink且小于等于maxk(mink,maxk是给定的两个参数,其值可以和表中的元素相同,也可以不同)的所有元素;
+示例:12输入：0-&gt;2-&gt;4-&gt;6-&gt;8-&gt;10，mink = 4, maxk = 8输出：1-&gt;2-&gt;10
+解题思路：分别查找第一个值&gt;mink的结点和第一个值 ≥maxk的结点，再修改指针，删除值大于mink且小于maxk的所有元素。
+代码：12345678910111213141516171819202122232425262728typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void DeleteMinMax(LinkList *L, int mink, int maxk) {    LinkList p, q, pre, temp;    pre = *L;    p = (*L)-&gt;next;    while (p &amp ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/c51766e2/" title="原地旋转链表">原地旋转链表</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 17:16:42"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">设计一个算法,将链表中所有节点的链接方向”原地旋转”,即要求仅仅利用原表的存储空间. 换句话说,要求算法空间复杂度为O(1);
+要求：
+算法空间复杂度为O(1)示例:12输入：0-&gt;2-&gt;4-&gt;6-&gt;8-&gt;10输出：10-&gt;8-&gt;6-&gt;4-&gt;2-&gt;0
+解题思路：要求算法空间复杂度为O(1)，即不能开辟新的空间，只能考虑改变指针指向，参考前插法的思想。复杂度分析：
+空间复杂度 O(1)
+
+代码：1234567891011121314151617typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void Inverse(LinkList *L) {    LinkList p, temp;    p = (*L)-&gt;next;    (*L)-&gt;next = NULL;    while (p) {        temp = p-&gt;next;        p-&gt;next ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/528dc7d4/" title="两个递增链表的交集">两个递增链表的交集</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 16:44:00"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">已知两个链表A和B分别表示两个集合.其元素递增排列. 设计一个算法,用于求出A与B的交集,并存储在A链表中;
+示例:12输入：2-&gt;4-&gt;6-&gt;8,  4-&gt;6-&gt;8-&gt;10输出：4-&gt;6-&gt;8
+解题思路：
+只有同时出现在两集合中的元素才出现在结果表中，合并后的新表使用头指针Lc指向。pa和pb分别是链表La和Lb的工作指针,初始化为相应链表的第一个结点;
+遍历，判断节点元素是否相等 – 相等，取A表中元素，删除B表中元素 – 不相等，删除最小的元素
+当链表有一个先到表尾，依次删除另一个非空表中的所有元素；
+释放链表B;复杂度分析：
+
+
+时间复杂度O(n)
+空间复杂度 O(1)代码：1234567891011121314151617181920212223242526272829303132333435363738394041typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void Intersecti ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/faa1cd64/" title="合并两个排序的链表">合并两个排序的链表</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-09 15:45:35"><i class="far fa-calendar-alt"></i>2020-04-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。
+要求：
+结果链表仍然使用两个链表的存储空间，不另外占用其他的存储空间；
+表中不允许有重复的数据；示例:12输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;2-&gt;3-&gt;4
+解题思路：根据题目描述，链表La，Lb是递增的，因此很容易想到使用双指针便利两个链表，根据判断大小关系确定节点添加顺序，两节点指针交替进行，直至遍历完毕；复杂度分析：
+时间复杂度O(M + N)：M，N分别为链表的长度。
+空间复杂度 O(1)代码：123456789101112131415161718192021222324252627282930313233typedef struct Node{    int data;    struct Node *next;} Node;typedef struct Node * LinkList;void mergeTwoLists(LinkList *La, LinkList *Lb, LinkList *Lc) {    LinkList pa, pb ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9c051e67/" title="数据结构与算法-双向链表">数据结构与算法-双向链表</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-06 15:16:15"><i class="far fa-calendar-alt"></i>2020-04-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">双向链表
+双向链表的结构双向链表的结点包括三个部分：前驱指针域、数据域和后继指针域：
+
+前驱指针域，又称为左链指针，用于存放一个指针，该指针指向上一个结点的开始存储地址；
+数据域，用于存储该结点的数据元素，数据元素类型由应用问题决定。
+后继指针域，又称为右链指针，用于存放一个指针，该指针指向下一个结点的开始存储地址。
+
+
+双向链表的实现结构体设计1234567typedef struct Node {    ElemType data;    struct Node *prior;    struct Node *next;} Node;typedef struct Node * LinkList;
+双向链表的创建123456789101112131415161718192021Status CreateLinkList(LinkList *L) {    *L = (LinkList)malloc(sizeof(Node));    if (*L == NULL) return ERROR;    (*L)-&gt;prior = NULL;    (*L)-&gt;next = N ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/99fb80ac/" title="数据结构与算法-单向循环链表">数据结构与算法-单向循环链表</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-04-03 16:34:29"><i class="far fa-calendar-alt"></i>2020-04-03</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">简介链表是线性表，包括两个部分：数据域、指针域；
+
+数据域：存储需要保存的数据
+指针域：各个节点之间的连接
+连续性：链表在逻辑上是连续的，但物理上未必连续
+
+链表主要有单向链表，双向链表，循环链表
+单向链表与单向循环链表对比：
+单向链表
+
+单向循环链表
+
+
+与单向链表区别之处在于单向链表的最后的结点的指针域 next 是设置为 null. 但是单向循环链表最后一个结点是重新指向它的第一个首元结点的位置;
+单向循环链表结构体设计
+123456typedef struct Node {    ElemType data;    struct Node *next;}Node;typedef struct Node * LinkList;
+
+单向链表的创建判断是否是第一次创建链表：
+
+YES：创建一个新结点,并使得新结点的next 指向自身；
+NO：找链表尾结点,将尾结点的next指向新结点. 新结点的next指向(*L);1234567891011121314151617181920212223242526Status CreateLinkList(LinkList *L) {    in ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/posts/3b4e48c8/" title="数据结构与算法基础">     <img class="post_bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722200249.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法基础"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3b4e48c8/" title="数据结构与算法基础">数据结构与算法基础</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 2020-03-31 17:09:16"><i class="far fa-calendar-alt"></i>2020-03-31</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DataStructures-Algorithms/">DataStructures &amp; Algorithms</a></span></div><div class="content">前言数据结构：是指相互之间存在一种或多种特定关系的数据元素的集合用计算机存储、组织数据的方式。数据结构分别为逻辑结构、（存储）物理结构和数据的运算三个部分。
+1.1. 概念术语
+数据（Data）是能被计算机处理的符号或符号集合
+数据元素（data element）是数据的基本单位
+数据项（data item）组成数据元素的最小单位
+数据对象（data object）是性质相同的数据元素的集合，是数据的一个子集
+数据结构（data structure）是数据的组织形式，数据元素之间存在的一种或多种特定关系的数据元素集合
+数据类型（data type）是按照数据值的不同进行划分的可操作性。在C语言中还可以分为原子类型和结构类型。原字类型是不可以再分解的基本类型，包括整型、实型、字符型等。结构类型是由若干个类型组合而成，是可以再分解的
+
+1.2. 逻辑结构
+集合结构：集合的数据元素没有其他关系，仅仅是因为他们挤在一个被称作“集合”的盒子里。
+线性结构：线性的数据元素结构关系是一对一的，并且是一种先后的次序
+树形结构：树形的数据元素结构关系是一对多的
+图形结构：图的数据元素结构关系是多对多的# ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/favicon.png'" alt="avatar"/><div class="author-info__name">SK Wang</div><div class="author-info__description">What doesn't kill you makes you stronger.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">Articles</div><div class="length_num">40</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">Tags</div><div class="length_num">7</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">Categories</div><div class="length_num">4</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="Bookmark"><i class="fas fa-bookmark"></i><span>Bookmark</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ShoukaiWang" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shoukaiwang@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/posts/16107/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722000047.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Hello World" alt="Hello World"/></div><div class="aside-post-title"><div class="aside-post_title" href="/posts/16107/" title="Hello World">Hello World</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-23 13:53:25">2020-07-23</time></div></a></div><div class="aside-recent-post"><a href="/posts/ecffcb82/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722200223.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="OpenGL的渲染技巧-正背面剔除" alt="OpenGL的渲染技巧-正背面剔除"/></div><div class="aside-post-title"><div class="aside-post_title" href="/posts/ecffcb82/" title="OpenGL的渲染技巧-正背面剔除">OpenGL的渲染技巧-正背面剔除</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-20 10:07:40">2020-07-20</time></div></a></div><div class="aside-recent-post"><a href="/posts/2d6c78da/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722200228.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="探寻autoreleasepool" alt="探寻autoreleasepool"/></div><div class="aside-post-title"><div class="aside-post_title" href="/posts/2d6c78da/" title="探寻autoreleasepool">探寻autoreleasepool</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-12 00:52:37">2020-07-12</time></div></a></div><div class="aside-recent-post"><a href="/posts/303a73ce/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722000053.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="iOS中离屏渲染探索" alt="iOS中离屏渲染探索"/></div><div class="aside-post-title"><div class="aside-post_title" href="/posts/303a73ce/" title="iOS中离屏渲染探索">iOS中离屏渲染探索</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-11 11:37:51">2020-07-11</time></div></a></div><div class="aside-recent-post"><a href="/posts/6322cf7d/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722200237.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="探寻iOS多线程" alt="探寻iOS多线程"/></div><div class="aside-post-title"><div class="aside-post_title" href="/posts/6322cf7d/" title="探寻iOS多线程">探寻iOS多线程</div><time class="aside-post_meta post-meta__date" title="Created 2020-07-10 15:15:25">2020-07-10</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DataStructures-Algorithms/"><span class="card-category-list-name">DataStructures & Algorithms</span><span class="card-category-list-count">27</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/OC%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/"><span class="card-category-list-name">OC底层原理</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/OpenGL/"><span class="card-category-list-name">OpenGL</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Algorithms/" style="font-size: 20.5px; color: #99a5b6">Algorithms</a> <a href="/tags/C/" style="font-size: 22px; color: #99a9bf">C</a> <a href="/tags/C/" style="font-size: 19px; color: #99a1ac">C++</a> <a href="/tags/Objective-C/" style="font-size: 19px; color: #99a1ac">Objective-C</a> <a href="/tags/OpenGL/" style="font-size: 17.5px; color: #999da3">OpenGL</a> <a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a> <a href="/tags/runloop/" style="font-size: 16px; color: #999">runloop</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">July 2020</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">May 2020</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">April 2020</span><span class="card-archive-list-count">18</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">March 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">Article :</div><div class="webinfo-article-count">40</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">UV :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">PV :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/ShoukaiWang/CDN@master/img/20200722000054.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By SK Wang</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">King</div><div class="icp"><a><img class="icp-icon" src="medias/loading.gif" data-original="/img/icp.png"/><span></span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="canvas_nest" color="255,0,0" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
+if (subtitleEffect) { 
+  var typed = new Typed("#subtitle", {
+    strings: "Never put off till tomorrow what you can do today,What doesn't kill you makes you stronger.".split(","),
+    startDelay: 300,
+    typeSpeed: 150,
+    loop: true,
+    backSpeed: 50
+  })
+} else {
+  document.getElementById("subtitle").innerHTML = 'Never put off till tomorrow what you can do today'
+}</script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"position":"left","width":150,"height":300},"mobile":{"show":true,"scale":1},"react":{"opacityDefault":0.3,"opacityOnHover":0.3,"opacity":0.95},"log":false});</script></body></html>
